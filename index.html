@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gerador de emblemas games de eventos - By Victor DEV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ </head>
+<body style="background-color: #15507c;">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col"> 
+    </div>
+    <div class="col">
+      <p class="text-white">Gerador de emblemas de nível de eventos.</p>
+      <p class="text-white">O gerador libera até o nivel 100.</p>
+      
+    </div>
+    <div class="col">
+      <style type="text/css">
+      	.botaunvictordev{
+      		background-color: #ccd8df;
+    border: 3px solid #275d8e;
+    border-radius: 5px;
+    color: #444;
+      	}
+      </style>
+    </div>
+  </div>
+</div>
+<div class="container">
+<input type="text" placeholder="Digite o código aqui." class="form-control botaunvictordev" id="userInputID">
+   
+    <button type="button" class="btn btn-success" id="getValBtnID">
+        Gerar abaixo
+    </button>
+    <p class="text-white">Ferramenta desenvolvida<a style="text-decoration: none;" class="text-white" href="https://github.com/victorlbs">  por Victor DEV</a></p>
+<hr class="text-white">
+</div>
+<div id="demo"></div>
+	<script type="text/javascript">
+    //COMEÇO CONFIGURAÇÕES DO SCRIPT BY VICTOR DEV
+	var urldacdn = "https://images.habblive.com/c_imagenes/album1584/" // INSIRA O URL DA CDN QUE IRÁ GERAR OS EMBLEMAS
+	// FIM CONFIGURAÇÕES DO SCRIPT BY VICTOR DEV
+
+		  $(document).ready(function () {
+            $("#getValBtnID").click(function () {
+                var inputString = $("#userInputID").val();
+                $(function () {
+    var text = "";
+    var i = 1;
+    var urldacdns = urldacdn;
+    while (i < 100) {
+        text += " <div class='container text-center text-white mt-5'><div class='row align-items-start'> <div class='col'> <div class='card' style='width: 40px;'><img src='http://images.habblive.com/c_imagenes/album1584/"+ inputString + "" + i + ".gif' class='card-img-top'> </div> </div>Código: " + inputString + i;"</div></div><p class='text-white'>";
+        i++;
+    }
+    $("#demo").html(text);
+});
+               
+            });
+        });
+	
+	</script>
+
+	<hr>
+
+</body>
+</html>
