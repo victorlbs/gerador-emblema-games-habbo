@@ -1,11 +1,12 @@
 
-<!DOCTYPE html>
+
+
 <html>
 <head>
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <title>Gerador de emblemas games de eventos - By Victor DEV</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
  </head>
 <body style="background-color: #15507c;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -31,13 +32,13 @@
   </div>
 </div>
 <div class="container">
-<input type="text" placeholder="Digite o código aqui." class="form-control botaunvictordev" id="userInputID">
-   
-    <button type="button" class="btn btn-success" id="getValBtnID">
+<input class="form-control botaunvictordev" id="userInputID" placeholder="Digite o código aqui." type="text" />
+   <input class="form-control botaunvictordev" value="https://images.habblive.com/c_imagenes/album1584/" id="cdn" placeholder="Digite a cdn aqui." type="text" />
+    <button class="btn btn-success" id="getValBtnID" type="button">
         Gerar abaixo
     </button>
-    <p class="text-white">Ferramenta desenvolvida<a style="text-decoration: none;" class="text-white" href="https://github.com/victorlbs">  por Victor DEV</a></p>
-<hr class="text-white">
+    <p class="text-white">Ferramenta desenvolvida<a class="text-white" href="https://github.com/victorlbs" style="text-decoration: none;">  por Victor DEV</a></p>
+<hr class="text-white" />
 </div>
 <div id="demo"></div>
 	<script type="text/javascript">
@@ -48,12 +49,13 @@
 		  $(document).ready(function () {
             $("#getValBtnID").click(function () {
                 var inputString = $("#userInputID").val();
+              var cdn = $("#cdn").val();
                 $(function () {
     var text = "";
     var i = 1;
     var urldacdns = urldacdn;
     while (i < 100) {
-        text += " <div class='container text-center text-white mt-5'><div class='row align-items-start'> <div class='col'> <div class='card' style='width: 40px;'><img src='http://images.habblive.com/c_imagenes/album1584/"+ inputString + "" + i + ".gif' class='card-img-top'> </div> </div>Código: " + inputString + i;"</div></div><p class='text-white'>";
+        text += " <div class='container text-center text-white mt-5'><div class='row align-items-start'> <div class='col'> <div class='card' style='width: 40px;'><img src='"+ cdn + "/"+ inputString + "" + i + ".gif' class='card-img-top'> </div> </div>Código: " + inputString + i;"</div></div><p class='text-white'>";
         i++;
     }
     $("#demo").html(text);
@@ -64,7 +66,7 @@
 	
 	</script>
 
-	<hr>
+	<hr />
 
 </body>
 </html>
